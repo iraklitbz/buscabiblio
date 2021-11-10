@@ -1,0 +1,252 @@
+
+.scriptorium {
+  
+
+  &.scriptorium__3__silla.scriptorium__circle {
+ 
+    .mesa {
+      align-items: center;
+      justify-content: center;
+    }
+    .circle-table {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background-color: var(--color-table);
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23e5c8a6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+      border: 1px solid var(--color-bg-light);
+      border-radius: 50%;
+      .silla {
+        width: 20px;
+        height: 30px;
+        position: absolute;
+    
+        span {
+          width: 15px;
+          height: 100%;
+        }
+        &:first-child {
+          left: 0;
+          top: -15px;
+          transform: rotate(50deg);
+        }
+        &:nth-child(2) {
+          right: 0;
+          top: -15px;
+          transform: rotate(-50deg);
+        }
+        &:nth-child(3) {
+          right: -25px;
+          top: 40%;
+
+        }
+        &:nth-child(4) {
+          right: 40%;
+          bottom: -30px;
+          transform: rotate(-90deg);
+
+        }
+        &:nth-child(5) {
+          left: -25px;
+          top: 40%;
+
+        }
+      }
+      
+    }
+      
+  }
+  
+  &.scriptorium__3__silla.scriptorium__vertical {
+    height: 140px;
+    background-color: var(--color-table);
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23e5c8a6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    border: 1px solid var(--color-bg-light);
+    border-radius: 6px;
+    width: 60px;
+    padding: 15px 0;
+  
+    .mesa {
+     
+      .silla {
+        width: 20px;
+        height: 30px;
+        span {
+          width: 15px;
+          height: 100%;
+        }
+      }
+      > * {
+       flex-direction: column;
+       width: 50%;
+       height: 100%;
+      }
+      .left-side {
+        position: relative;
+        left: -25px;
+      }
+      .right-side {
+        position: relative;
+        right: -25px;
+        align-items: flex-end;
+      }
+    }
+    &.small {
+      height: 110px;
+    }
+  }
+ 
+  &.scriptorium__3__silla.scriptorium__horizontal {
+    height: 60px;
+    background-color: var(--color-table);
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23e5c8a6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    border: 1px solid var(--color-bg-light);
+    border-radius: 6px;
+    width: 140px;
+    padding: 0 15px;
+    .mesa {
+      flex-direction: column;
+      .silla {
+        width: 30px;
+        height: 20px;
+        span {
+          width: 100%;
+          height: 15px;
+        }
+      }
+      > * {
+        width: 100%;
+        height: 50%;
+      }
+      .left-side {
+        position: relative;
+        top: -25px;
+      }
+      .right-side {
+        position: relative;
+        bottom: -25px;
+        align-items: flex-end;
+      }
+    }
+    &.one-side {
+      height: 40px;   
+      .mesa .right-side {
+        bottom: -45px;
+      }
+    }
+   
+  }
+  .mesa {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    > * {
+      display: flex;
+      justify-content: space-between;
+    } 
+    .silla {
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+       
+        background-color: var(--color-green);
+        border-radius: 10px;
+        &.ambar {
+          background-color: var(--color-yellow);
+        }
+        &.occuped {
+          background-color: var(--color-red);
+        }
+      }
+    }
+  }
+}
+
+.biblioteca-map {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+
+  .center {
+ 
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 240px);
+  }
+  aside {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 120px;
+  }
+  aside.left {
+
+    > *:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  aside.right {
+   align-items: flex-end;
+    > *:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  footer.bottom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.horizontal-align {
+  display: flex;
+  align-items: center;
+  > *:first-child {
+    margin-right: 5px;
+  }
+  &.united {
+    > *:not(:last-child) {
+      margin-right: 5px;
+    }
+    
+  }
+}
+
+.mt-1 {
+  margin-top: 140px;
+}
+
+
+.guide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #333;
+  h6:not(:last-child) {
+    margin-right: 30px;
+  }
+  .silla {
+    width: 30px;
+    height: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    &.disponible {
+      background-color: var(--color-green);
+    }
+    &.ocupado {
+      background-color: var(--color-red);
+    }
+    &.ambar {
+      background-color: var(--color-yellow);
+    }
+  }
+}
