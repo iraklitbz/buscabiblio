@@ -20,7 +20,7 @@ console.log(mesa)
           ? 
           <div className="left-side">
               <div className="silla"><span className="occuped"></span></div>
-              <div className="silla"><span></span></div>
+              <div className="silla"><span className="sin-datos"></span></div>
               {place === 3 ? <div className="silla"><span></span></div> : null}
             </div>
           : null 

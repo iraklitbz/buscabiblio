@@ -159,38 +159,67 @@
         &.occuped {
           background-color: var(--color-red);
         }
+        &.sin-datos {
+          background-color: var(--color-grey);
+        }
       }
     }
   }
 }
 
 .biblioteca-map {
-  display: flex;
-  flex-wrap: wrap;
+  
   padding: 20px;
-
+  @include breakpoint(sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .center {
  
-    padding: 20px 0;
+   
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100% - 240px);
+    width: 100%;
+    margin-bottom: 50px;
+    @include breakpoint(sm) {
+      padding: 20px 0;
+     margin-bottom: 0px;
+      width: calc(100% - 240px);
+    }
   }
   aside {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 120px;
+    justify-content: space-between;
+    width: 100%;
+    @include breakpoint(xs, "not all") {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include breakpoint(sm) {
+      flex-direction: column;
+      width: 120px;
+      justify-content: center;
+    }
   }
   aside.left {
-
+    margin-bottom: 90px;
+    @include breakpoint(sm) {
+      margin-bottom: 0px;
+    }
     > *:not(:last-child) {
       margin-bottom: 5px;
     }
   }
   aside.right {
    align-items: flex-end;
+   margin-top: 120px;
+   @include breakpoint(xs, "not all") {
+    align-items: center;
+  }
+   @include breakpoint(sm) {
+    margin-top: 0px;
+    }
     > *:not(:last-child) {
       margin-bottom: 5px;
     }
@@ -198,14 +227,43 @@
   footer.bottom {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     width: 100%;
+    flex-wrap: wrap;
+    
+    > * {
+      margin-bottom: 40px;
+      &:not(:last-child) {
+        margin-right: 25%;
+      }
+      &:nth-child(3) {
+        margin-right: 0px;
+      }
+    }
+    @include breakpoint(xs, "not all") {
+      flex-direction: column;
+      align-items: center;
+     .scriptorium {
+        margin-right: 0px;
+      }
+    }
+    @include breakpoint(sm) {
+      flex-wrap: initial;
+      > * {
+   
+        margin-bottom: 0px;
+        &:not(:last-child) {
+          margin-right: 0px;
+        }
+      }
+    }
   }
 }
 
 .horizontal-align {
   display: flex;
   align-items: center;
+  
   > *:first-child {
     margin-right: 5px;
   }
@@ -218,19 +276,50 @@
 }
 
 .mt-1 {
-  margin-top: 140px;
+  margin-top: 100px;
+  @include breakpoint(sm) {
+    margin-top: 140px;
+  }
+}
+
+.mt-0 {
+  margin-top: 50px;
+  @include breakpoint(sm) {
+    margin-top: 100px;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 50px;
+  @include breakpoint(sm) {
+    margin-top: 100px;
+  }
 }
 
 
 .guide {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 6px;
   color: #fff;
   background-color: #333;
+  font-weight: 400;
+  flex-wrap: wrap;
+  @include breakpoint(sm) {
+    justify-content: center;
+  }
+  h6 {
+    color: var(--color-white);
+    font-size: 15px;
+    padding: 5px 0;
+    @include breakpoint(sm) {
+      font-size: 18px;
+      padding: 0px 0;
+    }
+  }
   h6:not(:last-child) {
     margin-right: 30px;
   }
@@ -247,6 +336,19 @@
     }
     &.ambar {
       background-color: var(--color-yellow);
+    }
+    &.sin-datos {
+      background-color: var( --color-grey);
+    }
+  }
+}
+
+.horizontal-align.united.mt-1 {
+  @include breakpoint(xs, "not all") {
+    flex-wrap: wrap;
+    justify-content: center;
+    > *:not(:last-child) {
+      margin-bottom: 90px;
     }
   }
 }

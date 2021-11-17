@@ -1,0 +1,87 @@
+.chart {
+  padding: 20px;
+  border-radius: 6px;
+
+
+  @include breakpoint(sm) {
+    background-color: #DFEEC5;
+  }
+}
+
+.ring {
+
+  --diameter: 300;
+  --stroke-width: 40;
+  --pi: 3.1415;
+
+  --diameter-px: calc(var(--diameter) * 1px);
+  
+  --radius: calc((var(--diameter) - var(--stroke-width)) / 2);
+  --radius-px: calc(var(--radius) * 1px);
+  
+  --circumference: calc(var(--radius) * 2 * var(--pi));
+  --circumference-px: calc(var(--circumference) * 1px);
+
+  --offset: calc(var(--circumference) - var(--percent) / 100 * var(--circumference));
+  --offset-px: calc(var(--offset) * 1px);
+  
+  width: var(--diameter-px);
+  height: var(--diameter-px);
+}
+
+.ring circle {
+  stroke: #fff;
+  stroke-width: var(--stroke-width);
+  fill: transparent;
+  r: var(--radius-px);
+  cx: calc(var(--diameter-px) / 2);
+  cy: calc(var(--diameter-px) / 2);
+}
+
+.ring .progress {
+  stroke-dasharray: var(--circumference-px) var(--circumference-px);
+  stroke-dashoffset: var(--offset-px);
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.35s;
+  stroke: var( --color-red);
+}
+
+
+.ratio-chart {
+  position: relative;
+  padding: 20px;
+  display: inline-block;
+  .ratio-chart-headline {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    @include breakpoint(sm) {
+      background-color: #DFEEC5;
+    }
+  }
+  .ring {
+    position: relative;
+    z-index: 20;
+  }
+  .perccent {
+    display: block;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 8px;
+    color: #333;
+  }
+}

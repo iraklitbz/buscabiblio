@@ -5,10 +5,10 @@ import Chart from "../../components/Chart/Chart";
 
 const Home = () => {
   return (
-    <Fragment> 
-      <Biblio />
-      <Chart />
-    </Fragment>
+      <div className="general">
+        <Biblio />
+        <Chart />
+      </div>
    );
 }
  
