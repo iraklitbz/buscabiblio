@@ -1,39 +1,52 @@
-const MesaVertical = ({posicion, place, side, mesa}) => {
-console.log(mesa)
+const MesaVertical = ({posicion, sillas, mesa}) => {
+
   return ( 
     <div className={"scriptorium scriptorium__3__silla" + ` scriptorium__${posicion}`}>
      
-      { posicion === "circle" 
-      ?
-      <div id="18" className="mesa">
-          <div className="circle-table">
-            <div id="91" className="silla"><span></span></div>
-            <div id="92" className="silla"><span></span></div>
-            <div id="93" className="silla"><span></span></div>
-            <div id="94" className="silla"><span></span></div>
-            <div id="95" className="silla"><span></span></div>
-          </div>
-      </div> 
-      :
+      
       <div id={mesa} className="mesa">
-          {side === 'both' 
-          ? 
-          <div className="left-side">
-              <div className="silla"><span className="occuped"></span></div>
-              <div className="silla"><span className="sin-datos"></span></div>
-              {place === 3 ? <div className="silla"><span></span></div> : null}
-            </div>
-          : null 
+        {
           
-          } 
+          sillas.map(element => {
+            /*Obtenemos el tiempo de ahora*/ 
+           
+    
+            const timeNow = new Date(element.ahora).getTime()/1000
+            const timeEmision = new Date(element.desde).getTime()/1000
+            const timeResult = timeNow - timeEmision;
+            var isInAmbar = false;
+            var isInOcupate = false;
+            if(timeResult <= 1200 && timeResult >= 601 ) {
+              isInAmbar = true;
+              isInOcupate = false;
+              
+            } else if(timeResult <= 600 && timeResult >= 0) {
+              isInAmbar = false;
+              isInOcupate = true;
+            } else {
+              isInAmbar = false;
+              isInOcupate = false;
+            }
+           
+        
+
             
-            <div className="right-side">
-              <div className="silla"><span className="ambar"></span></div>
-              <div className="silla"><span></span></div>
-              {place === 3 ? <div className="silla"><span></span></div> : null}
-            </div>
+     
+            return (
+              <div id={element.id} key={element.id} className="silla">
+                <span className={
+                  element.libre === false ? 'occuped': 
+                  element.libre === null ? 'sin-datos' : 
+                  isInOcupate === true ? 'occuped' :
+                  isInAmbar === true ? 'ambar' : null
+                  }>
+
+                  </span>
+              </div>
+            )
+          })}
+           
       </div>  
-      }
      
     </div>
    );

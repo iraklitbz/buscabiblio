@@ -4,7 +4,7 @@
 
 
   @include breakpoint(sm) {
-    background-color: #DFEEC5;
+    background-color: rgba(255,255,255, 0.3);
   }
 }
 
@@ -70,7 +70,7 @@
     flex-direction: column;
     font-family: 'Lato', sans-serif;
     @include breakpoint(sm) {
-      background-color: #DFEEC5;
+      background-color: rgba(255,255,255, 0.3);;
     }
   }
   .ring {

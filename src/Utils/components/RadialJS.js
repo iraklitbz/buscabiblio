@@ -43,7 +43,7 @@ export default function() {
   };
 
   function createChartSvg(chart) {
-    var svg = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="'+chart.width+'" height="'+chart.height+'" class="radial-bar__svg js-radial-bar__svg"></svg>';
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="'+chart.width+'" height="'+chart.height+'" className="radial-bar__svg js-radial-bar__svg"></svg>';
     chart.chartArea.innerHTML = chart.chartArea.innerHTML + svg;
     chart.svg = chart.chartArea.getElementsByClassName('js-radial-bar__svg')[0];
     // create chart content
