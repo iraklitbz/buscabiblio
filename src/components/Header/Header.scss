@@ -199,49 +199,6 @@
   }
 }
 
-// no JS fallback
-html:not(.js) {
-  .header {
-    height: auto;
-    padding-top: var(--space-xs);
-  }
-
-  .header__trigger {
-    display: none;
-  }
-
-  .header__container {
-    display: block;
-  }
-
-  .header__nav {
-    position: static;
-    height: auto;
-    padding: 0;
-    box-shadow: none;
-    overflow: visible;
-    display: block;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  .header__nav-inner { 
-    position: static;
-    height: auto;
-    padding: var(--space-md) 0;
-    overflow: visible;
-  }
-
-  @include breakpoint(md) {
-    .header {
-      height: var(--header-height);
-      padding: 0;
-    }
-
-    .header__container {
-      display: flex;
-    }
-  }
+.header__container {
+  padding: 20px 0px;
 }
