@@ -1,5 +1,5 @@
-const MesaVertical = ({posicion, sillas, mesa}) => {
-
+const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
+  
   return ( 
     <div className={"scriptorium scriptorium__3__silla" + ` scriptorium__${posicion}`}>
      
@@ -10,7 +10,9 @@ const MesaVertical = ({posicion, sillas, mesa}) => {
           sillas.map(element => {
             /*Obtenemos el tiempo de ahora*/ 
            
-    
+            var timeOnly = element.desde;
+            timeOnly = timeOnly.split(' ')[1];
+
             const timeNow = new Date(element.ahora).getTime()/1000
             const timeEmision = new Date(element.desde).getTime()/1000
             const timeResult = timeNow - timeEmision;
@@ -27,14 +29,14 @@ const MesaVertical = ({posicion, sillas, mesa}) => {
               isInAmbar = false;
               isInOcupate = false;
             }
-           
+         
         
 
             
      
             return (
-              <div id={element.id} key={element.id} className="silla">
-                <span className={
+              <div id={element.id} key={element.id} className="silla" onClick={(e) => guardarEstadoSilla({modalHide: false, estado: e.target.className ,texto: timeOnly})}>
+                <span  className={
                   element.libre === false ? 'occuped': 
                   element.libre === null ? 'sin-datos' : 
                   isInOcupate === true ? 'occuped' :
@@ -42,6 +44,7 @@ const MesaVertical = ({posicion, sillas, mesa}) => {
                   }>
 
                   </span>
+                 
               </div>
             )
           })}
