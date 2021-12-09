@@ -7,9 +7,8 @@ import Chart from "../../components/Chart/Chart";
 const Home = () => {
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = 'http://localhost:4000/sillas';
+      const url = 'https://www.emeluz.com/bibliotecas/public/api/sillas';
       const resultado = await axios.get(url);
-     
       guardarSillas(resultado.data);
     }
     consultarAPI();
@@ -21,7 +20,9 @@ const Home = () => {
     return () => clearInterval(interval);
    
   },[]);
+ 
   const [sillas, guardarSillas] = useState([]); 
+ 
   return (
       <div className="general">
         <Biblio sillas={sillas} />
