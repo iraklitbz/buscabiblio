@@ -7,14 +7,14 @@ import Chart from "../../components/Chart/Chart";
 const Home = () => {
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = 'https://www.emeluz.com/bibliotecas/public/api/sillas';
+      const url = 'https://cors-anywhere.herokuapp.com/https://www.emeluz.com/bibliotecas/public/api/sillas';
       const resultado = await axios.get(url);
       guardarSillas(resultado.data);
+     
     }
     consultarAPI();
 
     const interval = setInterval(() => {
-      console.log('check every x time')
       consultarAPI();
     }, 300000);
     return () => clearInterval(interval);
@@ -22,7 +22,6 @@ const Home = () => {
   },[]);
  
   const [sillas, guardarSillas] = useState([]); 
- 
   return (
       <div className="general">
         <Biblio sillas={sillas} />

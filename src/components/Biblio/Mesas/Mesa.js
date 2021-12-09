@@ -17,7 +17,6 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
             const timeEmision = new Date(element.desde).getTime()/1000
            
             const timeResult = timeNow - timeEmision;
-            console.log('resultado',timeResult);
             var isInAmbar = false;
             var isInOcupate = false;
             var isSinData = false;
