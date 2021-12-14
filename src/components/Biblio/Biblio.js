@@ -2,12 +2,12 @@
 import { useState } from "react";
 import Mesa from "./Mesas/Mesa";
 
-const Biblio = ({sillas}) => {
+const Biblio = ({guardarSillasSinData, sillas}) => {
   const [estadoSilla, guardarEstadoSilla] = useState({
     modalHide: true,
     estado: '',
     texto: ''
-  })
+  });
   return (
     <div className="container max-width-lg">
         <div className="guide">
@@ -25,6 +25,7 @@ const Biblio = ({sillas}) => {
               side={'both'}
               mesa={1}
               sillas={sillas.slice(0, 6)}
+              guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
               posicion={'vertical'}
@@ -32,6 +33,7 @@ const Biblio = ({sillas}) => {
               side={'both'}
               mesa={2}
               sillas={sillas.slice(6, 12)}
+              guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
             posicion={'vertical'}
@@ -39,6 +41,7 @@ const Biblio = ({sillas}) => {
             side={'both'}
             mesa={3}
             sillas={sillas.slice(12, 18)}
+            guardarSillasSinData={guardarSillasSinData}
             />
           </aside>
           <div className="center">
@@ -49,6 +52,7 @@ const Biblio = ({sillas}) => {
               side={'single'}
               mesa={4}
               sillas={sillas.slice(18, 21)}
+              guardarSillasSinData={guardarSillasSinData}
               />
               <Mesa 
               posicion={'horizontal one-side'}
@@ -56,6 +60,7 @@ const Biblio = ({sillas}) => {
               mesa={5}
               side={'single'}
               sillas={sillas.slice(21, 24)}
+              guardarSillasSinData={guardarSillasSinData}
               />
             </div>
             <div className="horizontal-align mt-1">
@@ -65,6 +70,7 @@ const Biblio = ({sillas}) => {
               mesa={6}
               side={'both'}
               sillas={sillas.slice(24, 30)}
+              guardarSillasSinData={guardarSillasSinData}
               />
               <Mesa 
               posicion={'horizontal'}
@@ -72,6 +78,7 @@ const Biblio = ({sillas}) => {
               mesa={7}
               side={'both'}
               sillas={sillas.slice(30, 36)}
+              guardarSillasSinData={guardarSillasSinData}
               />
             </div>
             <div className="horizontal-align united mt-1">
@@ -81,6 +88,7 @@ const Biblio = ({sillas}) => {
               mesa={8}
               side={'both'}
               sillas={sillas.slice(36, 42)}
+              guardarSillasSinData={guardarSillasSinData}
               />
               <Mesa 
               posicion={'horizontal'}
@@ -88,6 +96,7 @@ const Biblio = ({sillas}) => {
               mesa={9}
               side={'both'}
               sillas={sillas.slice(42, 48)}
+              guardarSillasSinData={guardarSillasSinData}
               />
               <Mesa 
               posicion={'horizontal'}
@@ -95,6 +104,7 @@ const Biblio = ({sillas}) => {
               mesa={10}
               side={'both'}
               sillas={sillas.slice(48, 54)}
+              guardarSillasSinData={guardarSillasSinData}
               />
             </div>
           </div>
@@ -104,18 +114,21 @@ const Biblio = ({sillas}) => {
               guardarEstadoSilla={guardarEstadoSilla}
               mesa={11}
               sillas={sillas.slice(54, 58)}
+              guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
               posicion={'vertical small'}
               guardarEstadoSilla={guardarEstadoSilla}
               mesa={12}
               sillas={sillas.slice(58, 62)}
+              guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
             posicion={'vertical small'}
             guardarEstadoSilla={guardarEstadoSilla}
             mesa={13}
             sillas={sillas.slice(62, 66)}
+            guardarSillasSinData={guardarSillasSinData}
             />
           </aside>
           <footer className="bottom">
@@ -124,41 +137,40 @@ const Biblio = ({sillas}) => {
               guardarEstadoSilla={guardarEstadoSilla}
               mesa={14}
               sillas={sillas.slice(66, 72)}
+              guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
               posicion={'vertical'}
               mesa={15}
               guardarEstadoSilla={guardarEstadoSilla}
               sillas={sillas.slice(72, 78)}
+              guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
             posicion={'vertical'}
             mesa={16}
             guardarEstadoSilla={guardarEstadoSilla}
             sillas={sillas.slice(78, 84)}
+            guardarSillasSinData={guardarSillasSinData}
             />
             <Mesa 
               posicion={'vertical'}
               mesa={17}
               guardarEstadoSilla={guardarEstadoSilla}
               sillas={sillas.slice(84, 90)}
+              guardarSillasSinData={guardarSillasSinData}
             />
-            <Mesa 
-            posicion={'circle'}
-            mesa={18}
-            guardarEstadoSilla={guardarEstadoSilla}
-            sillas={sillas.slice(90, 95)}
-            />
+           
 
           </footer>
         </div>
         {!estadoSilla.modalHide === true ?
           <div className="modal">
           
-          { estadoSilla.estado === '' ? `Esta silla esta libre desde las ${estadoSilla.texto}` : 
-            estadoSilla.estado === 'occuped' ? `Esta silla esta ocupada desde las ${estadoSilla.texto}`:
-            estadoSilla.estado === 'sin-datos' ? `Esta silla esta sin datos` : 
-            estadoSilla.estado === 'ambar' ? 'Esta silla lleva libre menos de 20min' : null
+          { estadoSilla.estado === '' ? `Está silla esta libre desde las ${estadoSilla.texto}` : 
+            estadoSilla.estado === 'occuped' ? `Está silla esta ocupada desde las ${estadoSilla.texto}`:
+            estadoSilla.estado === 'sin-datos' ? `Está silla esta sin datos` : 
+            estadoSilla.estado === 'ambar' ? 'Está silla lleva libre menos de 20min' : null
           }
         </div>
         

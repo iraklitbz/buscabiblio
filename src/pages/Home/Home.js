@@ -5,9 +5,10 @@ import Chart from "../../components/Chart/Chart";
 
 
 const Home = () => {
+  const [sillasSinData, guardarSillasSinData] = useState();
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = 'https://cors-anywhere.herokuapp.com/https://www.emeluz.com/bibliotecas/public/api/sillas';
+      const url = 'https://www.emeluz.com/bibliotecas/public/api/sillas';
       const resultado = await axios.get(url);
       guardarSillas(resultado.data);
      
@@ -24,8 +25,8 @@ const Home = () => {
   const [sillas, guardarSillas] = useState([]); 
   return (
       <div className="general">
-        <Biblio sillas={sillas} />
-        <Chart sillas={sillas} />
+        <Biblio guardarSillasSinData={guardarSillasSinData} sillas={sillas} />
+        <Chart sillasSinData={sillasSinData} sillas={sillas} />
       </div>
    );
 }

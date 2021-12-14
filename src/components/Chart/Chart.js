@@ -1,8 +1,18 @@
 
-const Chart = ({sillas}) => {
- 
-  const filtroSillasOcupadas = sillas.filter(element => element.libre === false);
-  const calculoPorcentaje = (100 * filtroSillasOcupadas.length) / sillas.length;
+
+const Chart = ({sillasSinData, sillas}) => {
+  console.log(sillasSinData)
+  const guardarArraySillasOcupadas = [];
+  const filtroSillasOcupadas = sillas.filter(element => element.libre === false );
+  const removeSinDatos = filtroSillasOcupadas.filter(element => {
+    const timeNow = new Date(element.ahora).getTime()/1000
+    const timeEmision = new Date(element.desde).getTime()/1000
+    const timeResult = timeNow - timeEmision;
+    return timeResult > 93600
+  } );
+
+  const totalArrayOcupado = filtroSillasOcupadas.length - guardarArraySillasOcupadas.length;
+  const calculoPorcentaje = (100 * totalArrayOcupado) / sillas.length;
   const percentOcupado = calculoPorcentaje.toFixed();
   const percentCSS = { "--percent": percentOcupado };
   return ( 
@@ -15,7 +25,7 @@ const Chart = ({sillas}) => {
                 <circle className="progress"></circle>
               </svg>
 
-              <h2 className="ratio-chart-headline">Esta ocupado un <span className="perccent">{`${percentOcupado} %`}</span></h2>
+              <h2 className="ratio-chart-headline">Está ocupado un <span className="perccent">{`${percentOcupado} %`}</span></h2>
        
           </div>
       </div>
