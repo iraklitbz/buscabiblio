@@ -3,7 +3,7 @@
       {
       "id": 1,
       "mesa": "/public/api/mesas/1",
-      "libre": true,
+      "libre": false,
       "desde": "2021-11-10 19:20:34",
       "ahora": "2021-11-10 19:40:43"
       },

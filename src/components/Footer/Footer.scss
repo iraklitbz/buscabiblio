@@ -6,10 +6,12 @@
 }
 
 .footer-v3__logo {
+  width: 104px;
   a, svg, img {
-    width: 104px; // logo width
-    height: 30px; // logo height
+    width: 100%;
+    // logo width
     display: block;
+
   }
 }
 

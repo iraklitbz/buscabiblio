@@ -1,18 +1,16 @@
+import { useEffect, useState } from "react";
 
 
-const Chart = ({sillasSinData, sillas}) => {
-  console.log(sillasSinData)
-  const guardarArraySillasOcupadas = [];
-  const filtroSillasOcupadas = sillas.filter(element => element.libre === false );
-  const removeSinDatos = filtroSillasOcupadas.filter(element => {
-    const timeNow = new Date(element.ahora).getTime()/1000
-    const timeEmision = new Date(element.desde).getTime()/1000
-    const timeResult = timeNow - timeEmision;
-    return timeResult > 93600
-  } );
+const Chart = ({sillas}) => {
+  const [ArraySillasOcupadas, guardarArraySillasOcupadas] = useState([]);
+  useEffect(() => {
+    let htmlCollection = document.getElementById('biblio').getElementsByClassName('silla');
+    htmlCollection = [...htmlCollection];
+    guardarArraySillasOcupadas(htmlCollection.filter(element => element.firstChild.className === 'occuped'));
 
-  const totalArrayOcupado = filtroSillasOcupadas.length - guardarArraySillasOcupadas.length;
-  const calculoPorcentaje = (100 * totalArrayOcupado) / sillas.length;
+  }, [sillas])
+
+  const calculoPorcentaje = (100 * ArraySillasOcupadas.length) / sillas.length;
   const percentOcupado = calculoPorcentaje.toFixed();
   const percentCSS = { "--percent": percentOcupado };
   return ( 

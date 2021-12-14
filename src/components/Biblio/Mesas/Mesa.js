@@ -1,4 +1,4 @@
-const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa, guardarSillasSinData}) => {
+const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
   
   return ( 
     <div className={"scriptorium scriptorium__3__silla" + ` scriptorium__${posicion}`}>
@@ -36,7 +36,6 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa, guardarSillas
               isSinData = true;
               isInOcupate = false;
               isInAmbar = false;
-              guardarSillasSinData(isSinData)
             } 
             
             else {

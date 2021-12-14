@@ -1,10 +1,11 @@
 .chart {
-  padding: 20px;
-  border-radius: 6px;
 
+  border-radius: 6px;
+  padding: 0;
 
   @include breakpoint(sm) {
     background-color: rgba(255,255,255, 0.3);
+    padding: 20px;
   }
 }
 
@@ -50,7 +51,7 @@
 
 .ratio-chart {
   position: relative;
-  padding: 20px;
+  padding: 0px;
   display: inline-block;
   .ratio-chart-headline {
     width: 250px;

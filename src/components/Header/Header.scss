@@ -20,7 +20,7 @@
 .header__container {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -29,9 +29,11 @@
   position: relative;
   z-index: 2;
   flex-shrink: 0;
+  width: 120px;
 
   a, svg, img {
     display: block;
+    width: 100%;
   }
 }
 

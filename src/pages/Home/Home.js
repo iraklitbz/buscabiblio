@@ -5,7 +5,6 @@ import Chart from "../../components/Chart/Chart";
 
 
 const Home = () => {
-  const [sillasSinData, guardarSillasSinData] = useState();
   useEffect(() => {
     const consultarAPI = async () => {
       const url = 'https://www.emeluz.com/bibliotecas/public/api/sillas';
@@ -25,8 +24,8 @@ const Home = () => {
   const [sillas, guardarSillas] = useState([]); 
   return (
       <div className="general">
-        <Biblio guardarSillasSinData={guardarSillasSinData} sillas={sillas} />
-        <Chart sillasSinData={sillasSinData} sillas={sillas} />
+        <Biblio sillas={sillas} />
+        <Chart sillas={sillas} />
       </div>
    );
 }
