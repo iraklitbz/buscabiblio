@@ -10,6 +10,7 @@ const Home = () => {
       const url = 'https://www.emeluz.com/bibliotecas/public/api/sillas';
       const resultado = await axios.get(url);
       guardarSillas(resultado.data);
+ 
      
     }
     consultarAPI();
@@ -22,6 +23,7 @@ const Home = () => {
   },[]);
  
   const [sillas, guardarSillas] = useState([]); 
+  console.log(sillas)
   return (
       <div className="general">
         <Biblio sillas={sillas} />

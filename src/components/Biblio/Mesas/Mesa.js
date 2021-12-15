@@ -17,6 +17,7 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
             const timeEmision = new Date(element.desde).getTime()/1000
            
             const timeResult = timeNow - timeEmision;
+            console.log('reslutado tiempo', timeResult)
             var isInAmbar = false;
             var isInOcupate = false;
             var isSinData = false;
@@ -36,6 +37,7 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
               isSinData = true;
               isInOcupate = false;
               isInAmbar = false;
+              console.log('resultado isSinData', isSinData)
             } 
             
             else {
