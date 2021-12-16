@@ -21,40 +21,82 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
             var isInAmbar = false;
             var isInOcupate = false;
             var isSinData = false;
-           
-            if(timeResult <= 1200 && timeResult >= 601 ) {
-              isInAmbar = true;
-              isInOcupate = false;
-              isSinData = false;
-              
-            } else if(timeResult <= 600 && timeResult >= 0) {
-              isInAmbar = false;
-              isInOcupate = true;
-              isSinData = false;
-            }
+            var isLibre = false;
 
-            else if(timeResult > 93600) {
+            /* 
+            600 is 10min
+            1200 is 20min
+            93600 is 26h
+            */ 
+
+
+
+           
+            if(timeResult <= 1200 && element.libre && !element.libreAntes ) {
+              isLibre = false;
+              isSinData = false;
+              isInOcupate = false;
+              isInAmbar = true;
+    
+              
+            } 
+
+            
+
+
+            else if(timeResult <= 1200 && element.libre && element.libreAntes ) {
+              isLibre = true;
+              isSinData = false;
+              isInOcupate = false;
+              isInAmbar = false;
+            } 
+
+            else if(timeResult <= 1200 && !element.libre && !element.libreAntes ) {
+              isLibre = false;
+              isSinData = false;
+              isInOcupate = true;
+              isInAmbar = false;
+              
+              
+            } 
+
+            else if( timeResult >= 1200 && timeResult <= 93600 && element.libre) {
+              isLibre = true;
+              isSinData = false;
+              isInOcupate = false;
+              isInAmbar = false;
+            }
+            
+            else if( !element.libre && timeResult <= 93600 ) {
+              isLibre = false;
+              isSinData = false;
+              isInOcupate = true;
+              isInAmbar = false;
+            } 
+
+            else if(timeResult >= 93600 && element.libre || timeResult >= 93600 && !element.libre ) {
+              isLibre = false;
               isSinData = true;
               isInOcupate = false;
               isInAmbar = false;
             } 
             
             else {
-              isInAmbar = false;
-              isInOcupate = false;
+              isLibre = false;
               isSinData = false;
+              isInOcupate = false;
+              isInAmbar = false;
+              
             }
          
-        
 
-            
      
             return (
               <div id={element.id} key={element.id} className="silla" onClick={(e) => guardarEstadoSilla({modalHide: false, estado: e.target.className ,texto: timeOnly})}>
                 <span  className={
-                  element.libre === false && !isSinData ? 'occuped': 
+                  isLibre === true ? 'libre' :
+                  isInOcupate === true ? 'occuped': 
                   isSinData === true ? 'sin-datos' : 
-                  isInOcupate === true ? 'occuped' :
                   isInAmbar === true ? 'ambar' : null
                   }>
 

@@ -22,7 +22,7 @@ const Home = () => {
    
   },[]);
  
-  const [sillas, guardarSillas] = useState([]); 
+  const [sillas, guardarSillas] = useState([]);
   return (
       <div className="general">
         <Biblio sillas={sillas} />

@@ -8,6 +8,7 @@ const Biblio = ({sillas}) => {
     estado: '',
     texto: ''
   });
+  console.log(estadoSilla)
   return (
     <div className="container max-width-lg">
         <div className="guide">
@@ -167,7 +168,7 @@ const Biblio = ({sillas}) => {
         {!estadoSilla.modalHide === true ?
           <div className="modal">
           
-          { estadoSilla.estado === '' ? `Está silla esta libre desde las ${estadoSilla.texto}` : 
+          { estadoSilla.estado === 'libre' ? `Está silla esta libre desde las ${estadoSilla.texto}` : 
             estadoSilla.estado === 'occuped' ? `Está silla esta ocupada desde las ${estadoSilla.texto}`:
             estadoSilla.estado === 'sin-datos' ? `Está silla esta sin datos` : 
             estadoSilla.estado === 'ambar' ? 'Está silla lleva libre menos de 20min' : null

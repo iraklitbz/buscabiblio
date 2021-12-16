@@ -151,7 +151,7 @@
           top: -25px;
         }
         &:nth-child(2) {
-          top: -26px;
+          top: -25px;
           left: 50%;
           transform: translateX(-50%);
 
@@ -229,6 +229,7 @@
         left: 0;
         z-index: 9999;
         display: none;
+        
       }
       &:hover {
         .modal {
@@ -237,11 +238,19 @@
       }
       span {
        
-        background-color: var(--color-green);
+        background-color: var(--color-white);
         border-radius: 10px;
         &:hover {
           box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
           animation: pulse-green 2s infinite;
+        }
+        &.libre {
+          background-color: var(--color-green);
+          border: 1px solid var(--color-bg);
+          &:hover {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+            animation: pulse-green 2s infinite;
+          }
         }
         &.ambar {
           background-color: var(--color-yellow);
@@ -467,6 +476,13 @@
   background-color: #fff;
   margin-top: 20px;
   font-weight: bold;
+  @include breakpoint(xs, "not all") {
+    background-color: rgba(255,255,255, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
 }
 
 @keyframes pulse {
