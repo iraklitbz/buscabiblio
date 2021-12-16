@@ -32,49 +32,35 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
 
 
            
-            if(timeResult <= 1200 && element.libre && !element.libreAntes ) {
+            if(timeResult <= 1200 && element.libre === true && element.libreAntes === false ) {
               isLibre = false;
               isSinData = false;
               isInOcupate = false;
               isInAmbar = true;
-    
-              
             } 
 
-            
-
-
-            else if(timeResult <= 1200 && element.libre && element.libreAntes ) {
+            else if(timeResult <= 1200 && element.libre === true && element.libreAntes === true ) {
               isLibre = true;
               isSinData = false;
               isInOcupate = false;
               isInAmbar = false;
             } 
 
-            else if(timeResult <= 1200 && !element.libre && !element.libreAntes ) {
-              isLibre = false;
-              isSinData = false;
-              isInOcupate = true;
-              isInAmbar = false;
-              
-              
-            } 
-
-            else if( timeResult >= 1200 && timeResult <= 93600 && element.libre) {
+            else if( timeResult >= 1200 && timeResult <= 93600 && element.libre === true) {
               isLibre = true;
               isSinData = false;
               isInOcupate = false;
               isInAmbar = false;
             }
             
-            else if( !element.libre && timeResult <= 93600 ) {
+            else if( element.libre === false && timeResult <= 93600 ) {
               isLibre = false;
               isSinData = false;
               isInOcupate = true;
               isInAmbar = false;
             } 
 
-            else if(timeResult >= 93600 && element.libre || timeResult >= 93600 && !element.libre ) {
+            else if(timeResult >= 93600 && element.libre === true || timeResult >= 93600 && element.libre === false ) {
               isLibre = false;
               isSinData = true;
               isInOcupate = false;
