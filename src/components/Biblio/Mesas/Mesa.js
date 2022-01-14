@@ -27,6 +27,7 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
             600 is 10min
             1200 is 20min
             93600 is 26h
+            288000 is 80h
             */ 
 
 
@@ -46,21 +47,21 @@ const MesaVertical = ({posicion, sillas, guardarEstadoSilla, mesa}) => {
               isInAmbar = false;
             } 
 
-            else if( timeResult >= 1200 && timeResult <= 93600 && element.libre === true) {
+            else if( timeResult >= 1200 && timeResult <= 288000 && element.libre === true) {
               isLibre = true;
               isSinData = false;
               isInOcupate = false;
               isInAmbar = false;
             }
             
-            else if( element.libre === false && timeResult <= 93600 ) {
+            else if( element.libre === false && timeResult <= 288000 ) {
               isLibre = false;
               isSinData = false;
               isInOcupate = true;
               isInAmbar = false;
             } 
 
-            else if(timeResult >= 93600 && element.libre === true || timeResult >= 93600 && element.libre === false ) {
+            else if(timeResult >= 288000 && element.libre === true || timeResult >= 288000 && element.libre === false ) {
               isLibre = false;
               isSinData = true;
               isInOcupate = false;
