@@ -11,7 +11,7 @@ const Navbar = ({sillas}) => {
           <div className="quick--info">
 
             <Chart sillas={sillas} />
-            <p>Colegio Mayor Sta. María de Europa <strong>Universidad Complutense de Madrid </strong> Biblioteca. Aforo 90 pax.</p>
+            <p>Colegio Mayor Sta. María de Europa <strong>Universidad Complutense de Madrid </strong> Biblioteca. Aforo 90 personas.</p>
 
           </div>
         </div>

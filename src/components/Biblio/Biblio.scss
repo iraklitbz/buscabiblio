@@ -207,6 +207,34 @@
       
     }
   }
+  &.one-side {
+    .mesa {
+      .silla {
+        &:first-child {
+          right: -15px;
+          left: initial;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
+        }
+        &:nth-child(2) {
+          right: -15px;
+          left: initial;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
+        }
+        &:nth-child(3) {
+          right: -15px;
+          left: initial;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
+        }
+      }
+    }
+   
+  }
 }
  
   &.scriptorium__3__silla.scriptorium__horizontal {
@@ -331,39 +359,6 @@
       
     }
   }
-    &.one-side {
-      .mesa {
-        .silla {
-          &:first-child {
-            left: 0;
-            bottom: -15px;
-            @include breakpoint(sm) {
-              bottom: -25px;
-            }
-            top: unset;
-          }
-          &:nth-child(2) {
-            bottom: -14px;
-            @include breakpoint(sm) {
-              bottom: -24px;
-            }
-            left: 50%;
-            transform: translateX(-50%);
-            top: unset;
-    
-          }
-          &:nth-child(3) {
-            bottom: -15px;
-            @include breakpoint(sm) {
-              bottom: -25px;
-            }
-            right: 0;
-            top: unset;
-          }
-        }
-      }
-     
-    }
    
   }
   .mesa {
@@ -440,9 +435,7 @@
 }
 
 .biblioteca-map {
-  .center-distribution {
-    padding-left: 25px;
-  }
+ 
   .center {
 
     display: flex;
