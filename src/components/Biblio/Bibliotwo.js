@@ -3,7 +3,6 @@ import { useState } from "react";
 import Mesa from "./Mesas/Mesa";
 
 const Bibliotwo = ({sillas}) => {
-  console.log(sillas)
   const [estadoSilla, guardarEstadoSilla] = useState({
     modalHide: true,
     estado: '',
