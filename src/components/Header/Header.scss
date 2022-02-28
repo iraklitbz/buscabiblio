@@ -6,6 +6,13 @@
   }
 }
 
+.dark--header {
+  background-color:#333;
+  p {
+    color: var(--color-white);
+  }
+}
+
 .header {
   height: var(--header-height);
   width: 100%;
@@ -28,10 +35,20 @@
 .header__logo {
   position: relative;
   z-index: 2;
-  flex-shrink: 0;
-  width: 120px;
-
-  a, svg, img {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--space-sm);
+  @include breakpoint(md) {
+    padding: 0px;
+   }
+    a {
+      width: 180px;
+      @include breakpoint(md) {
+        width: 140px;
+      }
+      margin-right: var(--space-md);
+    }
+   svg, img {
     display: block;
     width: 100%;
   }
@@ -203,4 +220,6 @@
 
 .header__container {
   padding: 20px 0px;
+  max-width: 100%;
+  width: 100%;
 }

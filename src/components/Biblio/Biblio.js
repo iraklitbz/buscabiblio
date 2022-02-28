@@ -8,18 +8,17 @@ const Biblio = ({sillas}) => {
     estado: '',
     texto: ''
   });
-  console.log(estadoSilla)
   return (
-    <div className="container max-width-lg">
-        <div className="guide">
-        <h6>Libre: <span className="silla disponible"></span></h6>
-        <h6>Descanso: <span className="silla ambar"></span></h6>
-        <h6>Ocupado: <span className="silla ocupado"></span></h6>
-        <h6>Sin datos: <span className="silla sin-datos"></span></h6>
+    <div className="container max-width-sm">
+      <div className="guide">
+          <h6>Libre: <span className="silla disponible"></span></h6>
+          <h6>Descanso: <span className="silla ambar"></span></h6>
+          <h6>Ocupado: <span className="silla ocupado"></span></h6>
+          <h6>Sin datos: <span className="silla sin-datos"></span></h6>
       </div> 
         <div id="biblio" className="biblioteca-map">
         
-          <aside className="left">
+          <div className="left">
             <Mesa 
               posicion={'vertical'}
               guardarEstadoSilla={guardarEstadoSilla}
@@ -44,7 +43,7 @@ const Biblio = ({sillas}) => {
             sillas={sillas.slice(12, 18)}
             
             />
-          </aside>
+          </div>
           <div className="center">
             <div className="horizontal-align">
               <Mesa 
@@ -109,7 +108,7 @@ const Biblio = ({sillas}) => {
               />
             </div>
           </div>
-          <aside className="right">
+          <div className="right">
             <Mesa 
               posicion={'vertical small'}
               guardarEstadoSilla={guardarEstadoSilla}
@@ -131,7 +130,7 @@ const Biblio = ({sillas}) => {
             sillas={sillas.slice(62, 66)}
             
             />
-          </aside>
+          </div>
           <footer className="bottom">
             <Mesa 
               posicion={'vertical'}

@@ -242,17 +242,3 @@
   }
 }
 
-.general {
-  display: flex;
-  flex-direction: column;
-  > *:first-child {
-    order: 2;
-  }
-  > *:last-child {
-    order: 1;
-  }
-  @include breakpoint(sm) {
-    display: initial;
-    flex-direction: initial;
-  }
-}

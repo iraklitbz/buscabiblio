@@ -86,3 +86,35 @@
     color: #333;
   }
 }
+
+.graph {
+  background-color: var(--color-white);
+  padding: var(--space-xxxs);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+  }
+  .graph-chart {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: tomato;
+  }
+}
+.quick--info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .graph {
+    width: 100%;
+  }
+}

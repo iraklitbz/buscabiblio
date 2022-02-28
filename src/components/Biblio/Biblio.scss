@@ -3,47 +3,76 @@
   
 
   &.scriptorium__3__silla.scriptorium__circle {
- 
+    padding-right: 10px;
+    @include breakpoint(sm) {
+      padding-right: 0px;
+    }
     .mesa {
       position: relative;
-      width: 120px;
-      height: 120px;
+      width: 60px;
+      height: 60px;
       background-color: var(--color-table);
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23e5c8a6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
       border: 1px solid var(--color-bg-light);
       border-radius: 50%;
+      @include breakpoint(sm) {
+        width: 120px;
+      height: 120px;
+      }
       .silla {
-        width: 20px;
-        height: 30px;
+        width: 12px;
+        height: 12px;
+        @include breakpoint(sm) {
+          width: 30px;
+          height: 20px;
+        }
         position: absolute;
     
         span {
-          width: 15px;
+          width: 12px;
           height: 100%;
+          @include breakpoint(sm) {
+            width: 15px;
+          }
         }
         &:first-child {
           left: 0;
-          top: -15px;
+          top: -8px;
           transform: rotate(50deg);
+          @include breakpoint(sm) {
+            top: -15px;
+          }
         }
         &:nth-child(2) {
           right: 0;
-          top: -15px;
+          top: -8px;
+          @include breakpoint(sm) {
+            top: -15px;
+          }
           transform: rotate(-50deg);
         }
         &:nth-child(3) {
-          right: -25px;
+          right: -15px;
           top: 40%;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
 
         }
         &:nth-child(4) {
           right: 40%;
-          bottom: -30px;
+          bottom: -18px;
+          @include breakpoint(sm) {
+            bottom: -30px;
+          }
           transform: rotate(-90deg);
 
         }
         &:nth-child(5) {
-          left: -25px;
+          left: -15px;
+          @include breakpoint(sm) {
+            left: -25px;
+          }
           top: 40%;
 
         }
@@ -54,75 +83,123 @@
   }
   
   &.scriptorium__3__silla.scriptorium__vertical {
-    height: 140px;
+    height: 70px;
+    @include breakpoint(sm) {
+      height: 140px;
+    }
     background-color: var(--color-table);
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23e5c8a6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
     border: 1px solid var(--color-bg-light);
     border-radius: 6px;
-    width: 60px;
-    padding: 15px 0;
-  
+    width: 40px;
+    @include breakpoint(sm) {
+      width: 60px;
+    }
+    padding: 7px 0;
+    @include breakpoint(sm) {
+      padding: 15px 0;
+    }
     .mesa {
       position: relative;
       .silla {
-        width: 20px;
-        height: 30px;
+        width: 12px;
+        height: 12px;
+        @include breakpoint(sm) {
+          width: 20px;
+          height: 30px;
+        }
         position: absolute;
         
         span {
-          width: 15px;
+          width: 13px;
           height: 100%;
+          @include breakpoint(sm) {
+            width: 15px;
+          }
         }
         &:first-child {
           top:0;
-          left: -25px;
+          left: -15px;
+          @include breakpoint(sm) {
+            left: -25px;
+          }
         }
         &:nth-child(2) {
           top: 50%;
           transform: translateY(-50%);
-          left: -25px;
+          left: -15px;
+          @include breakpoint(sm) {
+            left: -25px;
+          }
         }
         &:nth-child(3) {
           bottom: 0;
-          left: -25px;
+          left: -15px;
+          @include breakpoint(sm) {
+            left: -25px;
+          }
         }
         &:nth-child(4) {
           top:0;
-          right: -25px;
+          right: -15px;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
         }
         &:nth-child(5) {
           top: 50%;
           transform: translateY(-50%);
-          right: -25px;
+          right: -15px;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
         }
         &:nth-child(6) {
           bottom: 0;
-          right: -25px;
+          right: -15px;
+          @include breakpoint(sm) {
+            right: -25px;
+          }
         }
       }
     }
     &.small {
-      height: 110px;
+      height: 60px;
+      @include breakpoint(sm) {
+        height: 110px;
+      }
       .mesa {
         .silla {
           &:first-child {
             top:0;
-            left: -25px;
+            left: -15px;
+            @include breakpoint(sm) {
+              left: -25px;
+            }
           }
           &:nth-child(2) {
             bottom:0;
-            left: -25px;
+            left: -15px;
+            @include breakpoint(sm) {
+              left: -25px;
+            }
             top: unset;
             transform: unset;
           }
           &:nth-child(3) {
             top:0;
-            right: -25px;
+            right: -15px;
+            @include breakpoint(sm) {
+              right: -25px;
+            }
             left: unset;
           }
           &:nth-child(4) {
             bottom:0;
-            right: -25px;
+            right: -15px;
+            @include breakpoint(sm) {
+              right: -25px;
+            }
             top: unset;
             transform: unset;
           }
@@ -133,70 +210,153 @@
 }
  
   &.scriptorium__3__silla.scriptorium__horizontal {
-    height: 60px;
+    height: 40px;
+    @include breakpoint(sm) {
+      height: 60px;
+    }
     background-color: var(--color-table);
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23e5c8a6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
     border: 1px solid var(--color-bg-light);
     border-radius: 6px;
-    width: 140px;
-    padding: 0 15px;
+    width: 70px;
+    @include breakpoint(sm) {
+      width: 140px;
+    }
+    padding: 0 7px;
+    @include breakpoint(sm) {
+      padding: 0 15px;
+    }
     .mesa {
       position: relative;
       .silla {
-        width: 30px;
-        height: 20px;
+        width: 12px;
+        height: 12px;
+        @include breakpoint(sm) {
+          width: 30px;
+          height: 20px;
+        }
         position: absolute;
         &:first-child {
           left: 0;
-          top: -25px;
+          top: -15px;
+          @include breakpoint(sm) {
+            top: -25px;
+          }
         }
         &:nth-child(2) {
-          top: -25px;
+          top: -15px;
+          @include breakpoint(sm) {
+            top: -25px;
+          }
           left: 50%;
           transform: translateX(-50%);
 
         }
         &:nth-child(3) {
-          top: -25px;
+          top: -15px;
+          @include breakpoint(sm) {
+            top: -25px;
+          }
           right: 0;
         }
         &:nth-child(4) {
           left: 0;
-          bottom: -25px;
+          bottom: -15px;
+          @include breakpoint(sm) {
+            bottom: -25px;
+          }
         }
         &:nth-child(5) {
-          bottom: -24px;
+          bottom: -14px;
+          @include breakpoint(sm) {
+            bottom: -24px;
+          }
           transform: translateX(-50%);
           left: 50%;
         }
         &:nth-child(6) {
           right: 0;
-          bottom: -25px;
+          bottom: -15px;
+          @include breakpoint(sm) {
+            bottom: -25px;
+          }
         }
         span {
           width: 100%;
-          height: 15px;
+          height: 12px;
         }
       }
      
     }
+    &.small {
+      width: 70px;
+      @include breakpoint(sm) {
+        width: 110px;
+      }
+      .mesa {
+        .silla {
+          &:first-child {
+            left: 0;
+            top: -15px;
+            @include breakpoint(sm) {
+              top: -25px;
+            }
+          }
+          &:nth-child(2) {
+            bottom: -15px;
+            @include breakpoint(sm) {
+              bottom: -25px;
+            }
+            left: unset;
+            right: 0;
+            top: unset;
+            transform: unset;
+  
+          }
+          &:nth-child(3) {
+            top: -15px;
+            @include breakpoint(sm) {
+              top: -25px;
+            }
+            right: 0;
+          }
+          &:nth-child(4) {
+            left: 0;
+            bottom: -15px;
+            @include breakpoint(sm) {
+              bottom: -25px;
+            }
+          }
+        }
+      
+    }
+  }
     &.one-side {
       .mesa {
         .silla {
           &:first-child {
             left: 0;
-            bottom: -25px;
+            bottom: -15px;
+            @include breakpoint(sm) {
+              bottom: -25px;
+            }
             top: unset;
           }
           &:nth-child(2) {
-            bottom: -24px;
+            bottom: -14px;
+            @include breakpoint(sm) {
+              bottom: -24px;
+            }
             left: 50%;
             transform: translateX(-50%);
             top: unset;
     
           }
           &:nth-child(3) {
-            bottom: -25px;
+            bottom: -15px;
+            @include breakpoint(sm) {
+              bottom: -25px;
+            }
             right: 0;
             top: unset;
           }
@@ -280,105 +440,34 @@
 }
 
 .biblioteca-map {
-  
-  padding: 20px;
-  @include breakpoint(sm) {
-    display: flex;
-    flex-wrap: wrap;
+  .center-distribution {
+    padding-left: 25px;
   }
   .center {
- 
-   
+
     display: flex;
     align-items: center;
-    flex-direction: column;
     width: 100%;
-    margin-bottom: 50px;
-    @include breakpoint(sm) {
-      padding: 20px 0;
-     margin-bottom: 0px;
-      width: calc(100% - 240px);
-    }
-  }
-  aside {
-    display: flex;
+    margin: 70px 0;
     justify-content: space-between;
-    width: 100%;
-    @include breakpoint(xs, "not all") {
-      flex-direction: column;
-      align-items: center;
-    }
-    @include breakpoint(sm) {
-      flex-direction: column;
-      width: 120px;
-      justify-content: center;
-    }
   }
-  aside.left {
-    margin-bottom: 90px;
-    @include breakpoint(sm) {
-      margin-bottom: 0px;
-    }
-    > *:not(:last-child) {
-      margin-bottom: 5px;
-    }
-  }
-  aside.right {
-   align-items: flex-end;
-   margin-top: 120px;
-   @include breakpoint(xs, "not all") {
-    align-items: center;
-  }
-   @include breakpoint(sm) {
-    margin-top: 0px;
-    }
-    > *:not(:last-child) {
-      margin-bottom: 5px;
-    }
-  }
-  footer.bottom {
-    margin-top: 50px;
-    display: flex;
-    justify-content:space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    
-    > * {
-      margin-bottom: 40px;
-      &:not(:last-child) {
-        margin-right: 25%;
-      }
-      &:nth-child(3) {
-        margin-right: 0px;
-      }
-    }
-    @include breakpoint(xs, "not all") {
-      flex-direction: column;
-      align-items: center;
-     .scriptorium {
-        margin-right: 0px;
-      }
-    }
-    @include breakpoint(sm) {
-      flex-wrap: initial;
-      > * {
-   
-        margin-bottom: 0px;
-        &:not(:last-child) {
-          margin-right: 0px;
-        }
-      }
-    }
+
+
+}
+.column {
+  flex-direction: column;
+}
+
+.vertical-align.united.column {
+  > *:not(:last-child) {
+    margin-bottom: var(--space-xl);
   }
 }
 
 .horizontal-align {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   
-  > *:first-child {
-    margin-right: 5px;
-  }
   &.united {
     > *:not(:last-child) {
       margin-right: 5px;
@@ -412,8 +501,7 @@
 .guide {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
+  justify-content: center;
   padding: 10px;
   border-radius: 6px;
   color: #fff;
@@ -465,7 +553,12 @@
   }
 }
 
-
+footer.horizontal-align {
+  .aside-footer {
+    margin-top: var(--space-sm);
+    margin-left: var(--space-xl);
+  }
+}
 
 .modal {
   display: flex;

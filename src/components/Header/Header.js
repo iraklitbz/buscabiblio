@@ -1,7 +1,7 @@
 import Navbar from "./Navbar/Navbar";
-const Header = () => {
+const Header = ({sillas}) => {
   return ( 
-    <Navbar />
+    <Navbar sillas={sillas} />
    );
 }
  

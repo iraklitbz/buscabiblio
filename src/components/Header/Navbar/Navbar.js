@@ -1,12 +1,19 @@
+import Chart from "../../Chart/Chart";
 
 
-const Navbar = () => {
+const Navbar = ({sillas}) => {
   return ( 
-      <div className="header__container container max-width-lg">
-        <div className="header__logo">
+      <div className="header__container container dark--header margin-bottom-xl">
+        <div className="header__logo max-width-sm">
           <a href="#">
             <img src="logo.png" />
           </a>
+          <div className="quick--info">
+
+            <Chart sillas={sillas} />
+            <p>Colegio Mayor Sta. María de Europa <strong>Universidad Complutense de Madrid </strong> Biblioteca. Aforo 90 pax.</p>
+
+          </div>
         </div>
 
         {/* <button className="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">

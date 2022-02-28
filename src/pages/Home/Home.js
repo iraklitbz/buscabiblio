@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Biblio from "../../components/Biblio/Biblio";
+import Bibliotwo from "../../components/Biblio/Bibliotwo";
 import Chart from "../../components/Chart/Chart";
-
-
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 const Home = () => {
   useEffect(() => {
     const consultarAPI = async () => {
@@ -25,8 +25,9 @@ const Home = () => {
   const [sillas, guardarSillas] = useState([]);
   return (
       <div className="general">
-        <Biblio sillas={sillas} />
-        <Chart sillas={sillas} />
+        <Header sillas={sillas} />
+        <Bibliotwo sillas={sillas} />
+        <Footer />
       </div>
    );
 }
