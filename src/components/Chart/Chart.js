@@ -14,10 +14,10 @@ const Chart = ({sillas}) => {
   const TotalArrayOcupado = ArraySillasOcupadas.length + ArraySillasAmbar.length 
   const calculoPorcentaje = (100 * TotalArrayOcupado) / sillas.length;
   const percentOcupado = calculoPorcentaje.toFixed();
-  const percentCSS = { "--percent": percentOcupado };
+
   return ( 
     <div className="graph">
-        <div className="graph-chart" style={{width: percentCSS}}></div>
+        <div className="graph-chart" style={{width: `${percentOcupado}%`}}></div>
         <span>{`${percentOcupado}/90`}</span>
     </div>
    );
