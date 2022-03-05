@@ -62,22 +62,22 @@ const Bibliotwo = ({sillas}) => {
               <Mesa 
                 posicion={'horizontal small'}
                 guardarEstadoSilla={guardarEstadoSilla}
-                mesa={1}
-                sillas={sillas.slice(0, 4)}
+                mesa={11}
+                sillas={sillas.slice(54, 58)}
                 
               />
               <Mesa 
                 posicion={'horizontal small'}
                 guardarEstadoSilla={guardarEstadoSilla}
-                mesa={2}
-                sillas={sillas.slice(4, 8)}
+                mesa={12}
+                sillas={sillas.slice(58,62)}
                 
               />
               <Mesa 
               posicion={'horizontal small'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={3}
-              sillas={sillas.slice(8, 12)}
+              mesa={13}
+              sillas={sillas.slice(62, 66)}
               
               />
             </div>
@@ -93,16 +93,16 @@ const Bibliotwo = ({sillas}) => {
                 posicion={'vertical one-side'}
                 guardarEstadoSilla={guardarEstadoSilla}
                 side={'single'}
-                mesa={4}
-                sillas={sillas.slice(12, 15)}
+                mesa={5}
+                sillas={sillas.slice(21, 24)}
                 
                 />
                 <Mesa 
                 posicion={'vertical one-side'}
                 guardarEstadoSilla={guardarEstadoSilla}
-                mesa={5}
+                mesa={4}
                 side={'single'}
-                sillas={sillas.slice(15, 18)}
+                sillas={sillas.slice(18, 21)}
                 
                 />
               </div>
@@ -110,15 +110,15 @@ const Bibliotwo = ({sillas}) => {
                 <Mesa 
                 posicion={'vertical'}
                 guardarEstadoSilla={guardarEstadoSilla}
-                mesa={6}
+                mesa={7}
                 side={'both'}
-                sillas={sillas.slice(18, 24)}
+                sillas={sillas.slice(30, 36)}
                 
                 />
                 <Mesa 
                 posicion={'vertical'}
                 guardarEstadoSilla={guardarEstadoSilla}
-                mesa={7}
+                mesa={6}
                 side={'both'}
                 sillas={sillas.slice(24, 30)}
                 
@@ -128,9 +128,9 @@ const Bibliotwo = ({sillas}) => {
               <Mesa 
               posicion={'vertical'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={8}
+              mesa={10}
               side={'both'}
-              sillas={sillas.slice(30, 36)}
+              sillas={sillas.slice(48, 54)}
               
               />
               <Mesa 
@@ -138,15 +138,15 @@ const Bibliotwo = ({sillas}) => {
               guardarEstadoSilla={guardarEstadoSilla}
               mesa={9}
               side={'both'}
-              sillas={sillas.slice(36, 42)}
+              sillas={sillas.slice(42, 48)}
               
               />
               <Mesa 
               posicion={'vertical'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={10}
+              mesa={8}
               side={'both'}
-              sillas={sillas.slice(42, 48)}
+              sillas={sillas.slice(36, 42)}
               
               />
             </div>
@@ -154,22 +154,22 @@ const Bibliotwo = ({sillas}) => {
               <Mesa 
                 posicion={'horizontal'}
                 guardarEstadoSilla={guardarEstadoSilla}
-                mesa={11}
-                sillas={sillas.slice(48, 54)}
+                mesa={17}
+                sillas={sillas.slice(84, 90)}
                 
               />
               <Mesa 
                 posicion={'horizontal'}
-                mesa={12}
+                mesa={16}
                 guardarEstadoSilla={guardarEstadoSilla}
-                sillas={sillas.slice(54, 60)}
+                sillas={sillas.slice(78, 84)}
                 
               />
               <Mesa 
               posicion={'horizontal'}
-              mesa={13}
+              mesa={15}
               guardarEstadoSilla={guardarEstadoSilla}
-              sillas={sillas.slice(60, 66)} />
+              sillas={sillas.slice(72, 78)} />
 
             </div>
           </div>
@@ -179,32 +179,32 @@ const Bibliotwo = ({sillas}) => {
                   posicion={'horizontal'}
                   guardarEstadoSilla={guardarEstadoSilla}
                   side={'both'}
-                  mesa={14}
-                  sillas={sillas.slice(66, 72)}
+                  mesa={1}
+                  sillas={sillas.slice(0, 6)}
                   
                 />
                 <Mesa 
                   posicion={'horizontal'}
                   guardarEstadoSilla={guardarEstadoSilla}
                   side={'both'}
-                  mesa={15}
-                  sillas={sillas.slice(72, 78)}
+                  mesa={2}
+                  sillas={sillas.slice(6, 12)}
                   
                 />
                 <Mesa 
                 posicion={'horizontal'}
                 guardarEstadoSilla={guardarEstadoSilla}
                 side={'both'}
-                mesa={16}
-                sillas={sillas.slice(78, 84)}
+                mesa={3}
+                sillas={sillas.slice(12, 18)}
                 
                 />
                 <div className="aside-footer">
                   <Mesa 
                   posicion={'horizontal'}
-                  mesa={17}
+                  mesa={14}
                   guardarEstadoSilla={guardarEstadoSilla}
-                  sillas={sillas.slice(84, 90)}
+                  sillas={sillas.slice(66, 72)}
                 
                   />
                 </div>

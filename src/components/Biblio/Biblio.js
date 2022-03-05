@@ -23,24 +23,24 @@ const Biblio = ({sillas}) => {
               posicion={'vertical'}
               guardarEstadoSilla={guardarEstadoSilla}
               side={'both'}
-              mesa={1}
-              sillas={sillas.slice(0, 6)}
+              mesa={11}
+              sillas={sillas.slice(54, 58)}
               
             />
             <Mesa 
               posicion={'vertical'}
               guardarEstadoSilla={guardarEstadoSilla}
               side={'both'}
-              mesa={2}
-              sillas={sillas.slice(6, 12)}
+              mesa={12}
+              sillas={sillas.slice(58, 62)}
               
             />
             <Mesa 
             posicion={'vertical'}
             guardarEstadoSilla={guardarEstadoSilla}
             side={'both'}
-            mesa={3}
-            sillas={sillas.slice(12, 18)}
+            mesa={13}
+            sillas={sillas.slice(62, 66)}
             
             />
           </div>
@@ -50,28 +50,20 @@ const Biblio = ({sillas}) => {
               posicion={'horizontal one-side'}
               guardarEstadoSilla={guardarEstadoSilla}
               side={'single'}
-              mesa={4}
-              sillas={sillas.slice(18, 21)}
+              mesa={5}
+              sillas={sillas.slice(21, 24)}
               
               />
               <Mesa 
               posicion={'horizontal one-side'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={5}
+              mesa={4}
               side={'single'}
-              sillas={sillas.slice(21, 24)}
+              sillas={sillas.slice(18, 21)}
               
               />
             </div>
             <div className="horizontal-align mt-1">
-              <Mesa 
-              posicion={'horizontal'}
-              guardarEstadoSilla={guardarEstadoSilla}
-              mesa={6}
-              side={'both'}
-              sillas={sillas.slice(24, 30)}
-              
-              />
               <Mesa 
               posicion={'horizontal'}
               guardarEstadoSilla={guardarEstadoSilla}
@@ -80,14 +72,22 @@ const Biblio = ({sillas}) => {
               sillas={sillas.slice(30, 36)}
               
               />
+              <Mesa 
+              posicion={'horizontal'}
+              guardarEstadoSilla={guardarEstadoSilla}
+              mesa={6}
+              side={'both'}
+              sillas={sillas.slice(24, 30)}
+              
+              />
             </div>
             <div className="horizontal-align united mt-1">
               <Mesa 
               posicion={'horizontal'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={8}
+              mesa={10}
               side={'both'}
-              sillas={sillas.slice(36, 42)}
+              sillas={sillas.slice(48, 54)}
               
               />
               <Mesa 
@@ -101,9 +101,9 @@ const Biblio = ({sillas}) => {
               <Mesa 
               posicion={'horizontal'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={10}
+              mesa={8}
               side={'both'}
-              sillas={sillas.slice(48, 54)}
+              sillas={sillas.slice(36, 42)}
               
               />
             </div>
@@ -112,22 +112,22 @@ const Biblio = ({sillas}) => {
             <Mesa 
               posicion={'vertical small'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={11}
-              sillas={sillas.slice(54, 58)}
+              mesa={17}
+              sillas={sillas.slice(84, 90)}
               
             />
             <Mesa 
               posicion={'vertical small'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={12}
-              sillas={sillas.slice(58, 62)}
+              mesa={16}
+              sillas={sillas.slice(78, 84)}
               
             />
             <Mesa 
             posicion={'vertical small'}
             guardarEstadoSilla={guardarEstadoSilla}
-            mesa={13}
-            sillas={sillas.slice(62, 66)}
+            mesa={15}
+            sillas={sillas.slice(72, 78)}
             
             />
           </div>
@@ -135,29 +135,29 @@ const Biblio = ({sillas}) => {
             <Mesa 
               posicion={'vertical'}
               guardarEstadoSilla={guardarEstadoSilla}
-              mesa={14}
-              sillas={sillas.slice(66, 72)}
+              mesa={1}
+              sillas={sillas.slice(0, 6)}
               
             />
             <Mesa 
               posicion={'vertical'}
-              mesa={15}
+              mesa={2}
               guardarEstadoSilla={guardarEstadoSilla}
-              sillas={sillas.slice(72, 78)}
+              sillas={sillas.slice(6, 12)}
               
             />
             <Mesa 
             posicion={'vertical'}
-            mesa={16}
+            mesa={3}
             guardarEstadoSilla={guardarEstadoSilla}
-            sillas={sillas.slice(78, 84)}
+            sillas={sillas.slice(12, 18)}
             
             />
             <Mesa 
               posicion={'vertical'}
-              mesa={17}
+              mesa={14}
               guardarEstadoSilla={guardarEstadoSilla}
-              sillas={sillas.slice(84, 90)}
+              sillas={sillas.slice(66, 72)}
               
             />
            
