@@ -27,7 +27,6 @@ const Table = () => {
       <div className="general">
         <Header noChart={noChart}  />
         <Sensor datos={datos} />
-        <Footer />
       </div>
    );
 }
