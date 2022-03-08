@@ -1,7 +1,5 @@
 import react from "react";
 const Sensor = ({datos}) => {
-    console.log(datos)
-
     return ( 
        <div className="container max-width-sm padding-bottom-xl">
            <h3>Datos del dispositivo {datos.deviceId}</h3>
@@ -10,13 +8,13 @@ const Sensor = ({datos}) => {
                     <thead className="tbl__header border-bottom border-2">
                         <tr className="tbl__row">
                             <th className="tbl__cell text-left"> 
-                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Medida</span>
+                                <span className="text-xs text-uppercase letter-spacing-lg font-semibold">Medida</span>
                             </th>
                             <th className="tbl__cell text-left"> 
-                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Valor</span>
+                                <span className="text-xs text-uppercase letter-spacing-lg font-semibold">Valor</span>
                             </th>
                             <th className="tbl__cell text-left"> 
-                                <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Unidad</span>
+                                <span className="text-xs text-uppercase letter-spacing-lg font-semibold">Unidad</span>
                             </th>
                         
                         </tr>
