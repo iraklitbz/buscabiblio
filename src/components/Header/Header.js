@@ -1,7 +1,7 @@
 import Navbar from "./Navbar/Navbar";
-const Header = ({sillas}) => {
+const Header = ({sillas, noChart}) => {
   return ( 
-    <Navbar sillas={sillas} />
+    <Navbar sillas={sillas} noChart={noChart} />
    );
 }
  

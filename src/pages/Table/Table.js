@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Bibliotwo from "../../components/Biblio/Bibliotwo";
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-const Home = () => {
+import Sensor from "../../components/Sensor/Sensor";
+const Table = () => {
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = 'https://www.emeluz.com/bibliotecas/public/api/sillas';
+      const url = 'https://www.emeluz.com/bibliotecas/public/api/sensors/1';
       const resultado = await axios.get(url);
-      guardarSillas(resultado.data);
+      guardarDatos(resultado.data);
  
      
     }
@@ -21,14 +21,15 @@ const Home = () => {
    
   },[]);
  
-  const [sillas, guardarSillas] = useState([]);
+  const [datos, guardarDatos] = useState([]);
+  const [noChart, guardarNoChart] = useState(true);
   return (
       <div className="general">
-        <Header sillas={sillas} />
-        <Bibliotwo sillas={sillas} />
+        <Header noChart={noChart}  />
+        <Sensor datos={datos} />
         <Footer />
       </div>
    );
 }
  
-export default Home;
+export default Table;

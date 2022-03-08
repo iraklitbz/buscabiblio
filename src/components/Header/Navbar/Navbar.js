@@ -1,7 +1,7 @@
 import Chart from "../../Chart/Chart";
 
 
-const Navbar = ({sillas}) => {
+const Navbar = ({sillas, noChart}) => {
   return ( 
       <div className="header__container container dark--header margin-bottom-xl">
         <div className="header__logo max-width-sm">
@@ -9,8 +9,8 @@ const Navbar = ({sillas}) => {
             <img src="logo.png" />
           </a>
           <div className="quick--info">
-
-            <Chart sillas={sillas} />
+            { noChart  ? null :  <Chart sillas={sillas} /> }
+           
             <p>Colegio Mayor Sta. María de Europa <strong>Universidad Complutense de Madrid </strong> Biblioteca. Aforo 90 personas.</p>
 
           </div>
