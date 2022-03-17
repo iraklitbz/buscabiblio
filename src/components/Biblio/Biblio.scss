@@ -118,7 +118,7 @@
           }
         }
         &:first-child {
-          top:0;
+          bottom:0;
           left: -15px;
           @include breakpoint(sm) {
             left: -25px;
@@ -133,14 +133,14 @@
           }
         }
         &:nth-child(3) {
-          bottom: 0;
+          top: 0;
           left: -15px;
           @include breakpoint(sm) {
             left: -25px;
           }
         }
         &:nth-child(4) {
-          top:0;
+          bottom:0;
           right: -15px;
           @include breakpoint(sm) {
             right: -25px;
@@ -155,7 +155,7 @@
           }
         }
         &:nth-child(6) {
-          bottom: 0;
+          top: 0;
           right: -15px;
           @include breakpoint(sm) {
             right: -25px;
@@ -266,47 +266,47 @@
         position: absolute;
         &:first-child {
           left: 0;
-          top: -15px;
+          bottom: -15px;
           @include breakpoint(sm) {
-            top: -25px;
+            bottom: -25px;
           }
         }
         &:nth-child(2) {
-          top: -15px;
+          bottom: -15px;
           @include breakpoint(sm) {
-            top: -25px;
+            bottom: -25px;
           }
           left: 50%;
           transform: translateX(-50%);
 
         }
         &:nth-child(3) {
-          top: -15px;
+          bottom: -15px;
           @include breakpoint(sm) {
-            top: -25px;
+            bottom: -25px;
           }
           right: 0;
         }
         &:nth-child(4) {
           left: 0;
-          bottom: -15px;
+          top: -15px;
           @include breakpoint(sm) {
-            bottom: -25px;
+            top: -25px;
           }
         }
         &:nth-child(5) {
-          bottom: -14px;
+          top: -14px;
           @include breakpoint(sm) {
-            bottom: -24px;
+            top: -24px;
           }
           transform: translateX(-50%);
           left: 50%;
         }
         &:nth-child(6) {
           right: 0;
-          bottom: -15px;
+          top: -15px;
           @include breakpoint(sm) {
-            bottom: -25px;
+            top: -25px;
           }
         }
         span {
@@ -325,9 +325,9 @@
         .silla {
           &:first-child {
             left: 0;
-            top: -15px;
+            bottom: -15px;
             @include breakpoint(sm) {
-              top: -25px;
+              bottom: -25px;
             }
           }
           &:nth-child(2) {
@@ -346,13 +346,14 @@
             @include breakpoint(sm) {
               top: -25px;
             }
-            right: 0;
+            left: 0;
           }
           &:nth-child(4) {
-            left: 0;
-            bottom: -15px;
+            right: 0;
+            left: unset;
+            top: -15px;
             @include breakpoint(sm) {
-              bottom: -25px;
+              top: -25px;
             }
           }
         }
