@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import Sensor from "../../components/Sensor/Sensor";
 const Table = () => {
   useEffect(() => {
@@ -25,7 +23,12 @@ const Table = () => {
   const [noChart, guardarNoChart] = useState(true);
   return (
       <div className="general">
-        <Header noChart={noChart}  />
+        <div className="headerSensor">
+          <div className="max-width-sm">
+            <h3>Piloto para visualización de datos del sensor de la UCM</h3>
+          </div>
+
+        </div>
         <Sensor datos={datos} />
       </div>
    );

@@ -2,7 +2,7 @@ import react from "react";
 const Sensor = ({datos}) => {
     return ( 
        <div className="container max-width-sm padding-bottom-xl">
-           <h3>Datos del dispositivo {datos.deviceId}</h3>
+           <h4>Datos del dispositivo {datos.deviceId}</h4>
            <div className="tbl margin-top-md">
             <table className="tbl__table text-unit-em text-sm border-bottom border-2">
                     <thead className="tbl__header border-bottom border-2">
