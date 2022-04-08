@@ -18,7 +18,7 @@ const Chart = ({sillas}) => {
   return ( 
     <div className="graph">
         <div className="graph-chart" style={{width: `${percentOcupado}%`}}></div>
-        <span>{`${percentOcupado}/90`}</span>
+        <span>{`Ocupado: ${percentOcupado} %`}</span>
     </div>
    );
 }
